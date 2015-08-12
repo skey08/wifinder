@@ -64,11 +64,17 @@
 
  .navbar {
   color: #ffffff ;
-  background: gray;
+  background: #8275A5;
   text-decoration: none;
   padding: 5px 5px;
   text-align: right;
+  line-height: 40px;
  }
+
+.navbar img {
+  float: left;
+  width: 95px;
+}
 
  a:link {
   color: #ffffff ;
@@ -86,7 +92,8 @@
 
  .footer {
   color: #ffffff ;
-  background: gray;
+  background: #8275A5;
+  line-height: 50px;
  }
 
  .footer li {
@@ -108,6 +115,10 @@
    padding: 10px 0;
    margin: 10px;
  }
+
+.workspaceinfo a {
+  color: #58729E;
+}
 
 .cushion {
   margin: 20px 0;
