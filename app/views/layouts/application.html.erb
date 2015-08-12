@@ -8,26 +8,29 @@
 <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<header>
- <div class="navbar">
-     <ul>
-       <%= image_tag "wifinder_white.png" %>
-       <li><%= link_to "All Workspaces", workspaces_path %></li>
-     </ul>
+  <header>
+   <div class="navbar">
+       <ul>
+         <%= link_to (image_tag "wifinder_white.png"), root_path %>
+         <li><%= link_to "All Workspaces", workspaces_path %></li>
+       </ul>
+     </div>
    </div>
- </div>
-</header>
+  </header>
+<div class="page-wrap">
 
-<div class="msg">
- <p class="notice"><%= notice %></p>
- <p class="alert"><%= alert %></p>
+  <div class="msg">
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
+  </div>
+
+  <div class="container">
+   <%= yield %>
+  </div>
+
 </div>
+<footer class="site-footer">
 
-<div class="container">
- <%= yield %>
-</div>
-
-<footer>
  <div class="footer">
    <ul>
      <li>About&nbsp;</li>||
@@ -37,6 +40,7 @@
  </div>
 
 </footer>
+
 
 </body>
 </html>
