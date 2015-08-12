@@ -3,7 +3,7 @@
   <%= form_for @workspace do |f| %>
     <%= f.label :category %><br>
     <%= f.select :category do %>
-      <%= ["Cofee Shop", "Library", "Cafe", "University Commons"]. each do |category| %>
+      <%= ["Coffee Shop", "Library", "Cafe", "Academic Commons"]. each do |category| %>
         <%= content_tag(:option, category, value: category) %>
         <% end %>
     <% end %><br>
@@ -24,7 +24,7 @@
     <%= f.label :hours %><br>
     <%= f.text_field :hours %><br>
 
-    <%= f.label "Wifi Accessibility"%><br>
+    <%= f.label "How's the Wifi?"%><br>
     <%= f.text_field :wifi%><br>
 
 

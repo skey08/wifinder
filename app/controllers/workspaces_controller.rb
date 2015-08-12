@@ -1,7 +1,10 @@
 class WorkspacesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   def index
-    @workspaces = Workspace.all
+    # workspaces sorted by top rating
+  @workspaces = Workspace.all.sort_by { |w| w.average_rating }.reverse
+    # workspaces sorted by category
+  # @workspaces = Workspace.all.sort_by { |w| w.category }
   end
 
   def new
