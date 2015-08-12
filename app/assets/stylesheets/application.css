@@ -122,6 +122,10 @@
   line-height: 40px;
  }
 
+.navbar li {
+  display: inline;
+}
+
 .navbar img {
   float: left;
   width: 95px;
@@ -194,4 +198,8 @@
 
 .showtitle {
   padding-left: 55px;
+}
+
+.showimg {
+  max-width: 250px;
 }

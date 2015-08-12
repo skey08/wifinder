@@ -12,15 +12,15 @@
   <header>
    <div class="navbar">
        <ul>
-         <%= link_to (image_tag "wifinder_white.png"), root_path %>
+         <li><%= link_to (image_tag "wifinder_white.png"), root_path %></li>
+         <li><%= link_to "All Workspaces", workspaces_path %></li> ||
          <% if !current_user %>
-           <li><%= link_to "Sign Up", new_user_registration_path %></li>
-           <li><%= link_to "Sign In", new_user_session_path %></li>
+           <li><%= link_to "Sign Up", new_user_registration_path %></li> ||
+           <li><%= link_to "Sign In", new_user_session_path %></li> ||
          <% else %>
-           <li><%= link_to "Add New Workspace", new_workspace_path %></li>
+           <li><%= link_to "Add New Workspace", new_workspace_path %></li> ||
            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
          <% end %>
-         <li><%= link_to "All Workspaces", workspaces_path %></li>
 
        </ul>
      </div>

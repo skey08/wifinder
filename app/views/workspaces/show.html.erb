@@ -7,7 +7,7 @@
 
 
 <ul>
-    <%= image_tag @workspace.image_url %>
+    <%= image_tag @workspace.image_url, class: "showimg" %>
     <li><%= link_to @workspace.name, @workspace %></li>
     <li><%= @workspace.address %></li>
     <li><%= @workspace.category %></li>
