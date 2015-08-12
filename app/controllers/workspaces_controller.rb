@@ -20,6 +20,12 @@ class WorkspacesController < ApplicationController
 
   def show
     @workspace = Workspace.find(params[:id])
+
+    @review = Review.new
+    @reviews = @workspace.reviews
+
+    # check to see if user has left a review
+    @hasReview = @reviews.find_by(user_id: current_user.id) if current_user
   end
 
   def edit

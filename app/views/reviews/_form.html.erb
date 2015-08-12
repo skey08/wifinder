@@ -1,0 +1,11 @@
+<%= form_for [@workspace, @review] do |f| %>
+  <%= f.text_field :star, placeholder: "1-5 stars" %>
+  <%= f.text_field :comment, placeholder: "comment here" %>
+
+  <%= f.hidden_field :workspace_id, value: @workspace.id %>
+  <%= f.hidden_field :user_id, value: current_user.id %><br>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,10 +1,29 @@
 <h1>Show page for <%= @workspace.name %></h1>
+
+<% if !@reviews.blank? %>
+  <h2><%= @workspace.average_rating %> average rating (<%= @reviews.count %> <%= @reviews.count != 1 ? "Review" : "Reviews" %>)</h2>
+<% end %>
+
 <ul>
     <%= image_tag @workspace.image_url %>
     <li><%= link_to @workspace.name, @workspace %></li>
     <li><%= @workspace.address %></li>
     <li><%= @workspace.category %></li>
-    <li><%= link_to "#{@workspace.name} official website", @workspace.company_url %></li>
+    <li><%= link_to "Workspace website", @workspace.company_url %></li>
     <li><%= @workspace.hours %></li>
-
 </ul>
+
+  <div class="reviews-list">
+    <h3>Reviews</h3>
+    <%= render "reviews/index" %>
+  </div>
+
+  <div class="reviews-new">
+    <% if !@hasReview && current_user %>
+      <%= render "reviews/form" %>
+    <% elsif !current_user %>
+      <p>
+        Please log in to leave a review!
+      </p>
+    <% end %>
+  </div>

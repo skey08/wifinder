@@ -1,0 +1,17 @@
+<% if @reviews.blank? %>
+  <span>There are no reviews yet. Be the first!</span>
+<% end %>
+
+<% @reviews.order("id desc").each do |review| %>
+  <div class="review-user">
+      <span>About <%= time_ago_in_words(review.created_at) %> ago,</span>
+      <span><%= review.user.email %> said:</span>
+  </div>
+  <div class="review-rating"><%= review.star %> star</div>
+  <div class="review-comment">"<%= review.comment %>"</div>
+  <div class="remove-review">
+    <% if current_user && current_user.id == review.user.id %>
+      <%= link_to "Remove", [@workspace, review], method: :delete, data: {confirm: "Are you sure?"} %>
+    <% end %>
+  </div>
+<% end %>
