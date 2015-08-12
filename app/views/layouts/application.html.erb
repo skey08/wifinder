@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WifinderApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+ <title>WifinderApp</title>
+ <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ <%= csrf_meta_tags %>
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <header>
-  <div class="navbar">
-    <ul>
-      <li><%= link_to "All Workspaces", workspaces_path %></li>
-    </ul>
-  </div>
+ <div class="navbar">
+     <ul>
+       <li><%= link_to "All Workspaces", workspaces_path %></li>
+     </ul>
+   </div>
+ </div>
 </header>
 
 <div class="msg">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+ <p class="notice"><%= notice %></p>
+ <p class="alert"><%= alert %></p>
 </div>
 
 <div class="container">
-  <%= yield %>
+ <%= yield %>
 </div>
+
+<footer>
+ <div class="footer">
+   <ul>
+     <li>About&nbsp;</li>||
+     <li>Contact&nbsp;</li>||
+     <li>Careers</li>
+   </ul>
+ </div>
+
+</footer>
 
 </body>
 </html>
