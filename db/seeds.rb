@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Workspace.destroy_all
+
 
 workspace = Workspace.create ([
   {name: "Starbucks", address: "1425 P St NW, Washington, DC 20005", category: "Coffee Shop", company_url: "http://www.starbucks.com/", image_url: "https://lh4.ggpht.com/m0b74lPyYDhg_pxyBQMEeYU6hBbLBPuzyLHjCErYtJDn5Oy4nsnVsGlSZyXFj9XTrPU=w300", hours: "5:30am-10pm", wifi: "Available to all patrons"},
