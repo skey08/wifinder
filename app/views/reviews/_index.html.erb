@@ -7,11 +7,21 @@
       <span>About <%= time_ago_in_words(review.created_at) %> ago,</span>
       <span><%= review.user.email %> said:</span>
   </div>
-  <div class="review-rating"><%= review.star %> star</div>
+  <div class="stars_<%= review.id %>">
+  </div>
   <div class="review-comment">"<%= review.comment %>"</div>
   <div class="remove-review">
     <% if current_user && current_user.id == review.user.id %>
       <%= link_to "Remove", [@workspace, review], method: :delete, data: {confirm: "Are you sure?"} %>
     <% end %>
   </div>
+
+  <script>
+    $('#stars_<%= review.id %>').raty({
+      path: '/assets',
+      readOnly: true,
+      score: <%= review.star %>
+    })
+  </script>
+
 <% end %>
