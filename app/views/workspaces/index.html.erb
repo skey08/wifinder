@@ -1,20 +1,27 @@
 <div id="workspace_index">
 <h1>All Workspaces with Free WiFi</h1>
 
-<div class="workspaces">
 <ul>
-  <% @workspaces.each do |workspace| %>
-  <li class="workspaceimg">
-    <%= image_tag workspace.image_url %>
-  </li>
-  <li class="workspaceinfo">
-    <p><%= link_to workspace.name, workspace %></p>
-    <p><%= workspace.address %></p>
-    <p><%= workspace.category %></p>
-    <p><%= link_to "#{workspace.name} website", workspace.company_url %></p>
-    <p><%= workspace.hours %></p>
-  </li>
-  <% end %>
+  <div class="cushion column-4">&nbsp;</div>
+
+    <div class="cushion column-4">
+      <% @workspaces.each do |workspace| %>
+        <div class="workspaces row">
+          <li class="workspaceimg">
+            <%= image_tag workspace.image_url, class: "column-5" %>
+          </li>
+          <li class="workspaceinfo column-5">
+            <p><%= link_to workspace.name, workspace %></p>
+            <p><%= workspace.address %></p>
+            <p><%= workspace.category %></p>
+            <p><%= link_to "#{workspace.name} website", workspace.company_url%></p>
+            <p><%= workspace.hours %></p>
+          </li>
+          <li class="column-2">&nbsp;</li>
+        </div>
+      <% end %>
+    </div>
+  <div class="cushion column-4">&nbsp;</div>
 </ul>
 
 </div>
