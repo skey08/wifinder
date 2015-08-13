@@ -210,6 +210,10 @@ filter: blur(6px);
   max-width: 250px;
 }
 
+.review {
+  margin-left:3%;
+}
+
 .reviews-header h3 {
   background-color: #58729E;
   margin: 20px 300px;
@@ -217,7 +221,7 @@ filter: blur(6px);
 }
 
 .reviews-list {
-  background-color: #97A4A7;
+  background-color: #CDCCD5;
   margin: 20px 300px;
 }
 
