@@ -1,5 +1,6 @@
 <div id="workspace_index">
 <h1>All Workspaces with Free WiFi (By Top Rating)</h1>
+<%= form_for(@search, :name => { :action => "index" }, :html => {:method => :get} ) do |f| %> <%= f.text_field(:address) %>
 
 <ul>
   <div class="cushion column-4">&nbsp;</div>

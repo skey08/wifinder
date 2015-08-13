@@ -5,6 +5,9 @@ class WorkspacesController < ApplicationController
   @workspaces = Workspace.all.sort_by { |w| w.average_rating }.reverse
     # workspaces sorted by category
   # @workspaces = Workspace.all.sort_by { |w| w.category }
+  @workspace_category = Category.all(:order => 'work_.last_name DESC')
+  @search = Workspace.new(params[:workspace)
+  @Workspaces = Workspace.by_address(@search.address)
   end
 
   def new
