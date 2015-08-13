@@ -15,11 +15,12 @@
     <li><%= @workspace.hours %></li>
 </ul>
 
-  <div class="reviews-list">
+  <div class="reviews-header">
     <h3>Reviews</h3>
+  </div>
+  <div class="reviews-list">
     <%= render "reviews/index" %>
   </div>
-
   <div class="reviews-new">
     <% if !@hasReview && current_user %>
       <%= render "reviews/form" %>
@@ -29,6 +30,7 @@
       </p>
     <% end %>
   </div>
+
 
 <script>
   $('#average_rating').raty({
