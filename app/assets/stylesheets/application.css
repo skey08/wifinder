@@ -226,9 +226,8 @@ div.review-user:nth-child(even) {
   background-color: white;
 }
 
-.actions input {
-  background-color: #CDCCD5;
+form input {
+  background-color: #FFF;
   padding: 5px;
   margin: 5px 0;
-
 }
