@@ -2,12 +2,32 @@ class WorkspacesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   def index
     # workspaces sorted by top rating
-  @workspaces = Workspace.all.sort_by { |w| w.average_rating }.reverse
+
+  @category = params[:category]
+  @location = params[:location]
+
+  @workspaces = Workspace
+
+  if @category
+    @workspaces = @workspaces.where(category: @category)
+  end
+
+  if @location
+    @workspaces = @workspaces.where("address like '%#{@location}%'")
+  end
+
+  if @workspaces == Workspace
+    @workspaces = Workspace.all
+  end
+
+  @workspaces = @workspaces.sort_by { |w| w.average_rating }.reverse
+
     # workspaces sorted by category
   # @workspaces = Workspace.all.sort_by { |w| w.category }
-  @workspace_category = Category.all(:order => 'work_.last_name DESC')
-  @search = Workspace.new(params[:workspace)
-  @Workspaces = Workspace.by_address(@search.address)
+
+  # @search = Workspace.new(params[:workspace])
+  # @workspaces = Workspace.address[@search.address]
+
   end
 
   def new

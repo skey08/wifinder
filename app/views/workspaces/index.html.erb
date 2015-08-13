@@ -1,6 +1,17 @@
 <div id="workspace_index">
 <h1>All Workspaces with Free WiFi (By Top Rating)</h1>
-<%= form_for(@search, :name => { :action => "index" }, :html => {:method => :get} ) do |f| %> <%= f.text_field(:address) %>
+<span><%= link_to "All", workspaces_path %></span>
+
+<% ["Coffee Shop", "Library", "Cafe", "Academic Commons"].each do |category| %>
+  <span><%= link_to category, workspaces_path(category: category) %></span>
+<% end %>
+
+<%#= form_for(@search, :name => { :action => "index" }, :html => {:method => :get} ) do |f| %> <%#= f.text_field(:address) %>
+
+<%= form_tag(workspaces_path, method: 'get') do %>
+  <%= text_field_tag :location, "Search by Location" %>
+  <%= submit_tag :search %>
+<% end %>
 
 <ul>
   <div class="cushion column-4">&nbsp;</div>
