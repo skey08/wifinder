@@ -5,7 +5,7 @@
 <% @reviews.order("id desc").each do |review| %>
   <div class="review-user">
       <span>About <%= time_ago_in_words(review.created_at) %> ago,</span>
-      <span><%= review.user.email %> said:</span>
+      <span><%= review.user.name %> said:</span>
   </div>
   <div class="stars_<%= review.id %>">
   </div>
