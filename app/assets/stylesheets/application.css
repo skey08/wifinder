@@ -49,6 +49,27 @@ filter: blur(6px);
 }
 
 
+.tagline {
+  color: white;
+  padding: 10px;
+  font-size:1.4em;
+  margin-bottom: 40px;
+}
+
+p.starterlink a {
+  color: #ffffff;
+  border: 3px solid rgba(200, 200, 200, 0.4);
+  padding: 1em;
+  margin: .5em;
+  text-decoration: none;
+}
+
+.starterlink a:hover {
+  background-color: rgba(200, 200, 200, 0.4);
+  color: black;
+  text-decoration: none;
+}
+
 
 
 /*.firstpage {
