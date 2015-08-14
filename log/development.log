@@ -11919,3 +11919,98 @@ Started GET "/assets/star-off.png" for 127.0.0.1 at 2015-08-13 16:18:06 -0400
 Started GET "/assets/star-on.png" for ::1 at 2015-08-13 21:09:41 -0400
 >>>>>>> 191fcccd3159ce7607dd74067f1debaae4e474cc
 >>>>>>> 302df67c01c408b2408e416c54fb5b3a578bfe68
+
+
+Started GET "/" for ::1 at 2015-08-14 09:07:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (101.4ms)
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+Completed 200 OK in 282ms (Views: 269.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/application.self-b90104e1903d443e91d81c30bc51b2b33b784055f189db664e56d67304f491c7.css?body=1" for ::1 at 2015-08-14 09:07:57 -0400
+
+
+Started GET "/assets/application.self-0ac619e0a7432b8ae4632600c7faa5031c5842c7e1e249e0fdb5c7c87833afa3.js?body=1" for ::1 at 2015-08-14 09:07:57 -0400
+
+
+Started GET "/assets/signal-995bb08b11c6117b325c67375fbcf82b663e18299b615c346b930e4a091b0bea.png" for ::1 at 2015-08-14 09:07:57 -0400
+
+
+Started GET "/assets/cat.gif" for ::1 at 2015-08-14 09:07:57 -0400
+
+
+Started GET "/" for ::1 at 2015-08-14 09:08:51 -0400
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/cat.gif" for ::1 at 2015-08-14 09:08:52 -0400
+
+
+Started GET "/workspaces" for ::1 at 2015-08-14 09:09:53 -0400
+Processing by WorkspacesController#index as HTML
+  [1m[35mWorkspace Load (0.9ms)[0m  SELECT "workspaces".* FROM "workspaces"
+  [1m[36mReview Load (0.7ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."workspace_id" = $1[0m  [["workspace_id", 13]]
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."workspace_id" = $1  [["workspace_id", 14]]
+  [1m[36m (0.7ms)[0m  [1mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."workspace_id" = $1[0m  [["workspace_id", 14]]
+  [1m[35mReview Load (0.3ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."workspace_id" = $1  [["workspace_id", 15]]
+  [1m[36m (0.3ms)[0m  [1mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."workspace_id" = $1[0m  [["workspace_id", 15]]
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."workspace_id" = $1  [["workspace_id", 16]]
+  [1m[36m (0.3ms)[0m  [1mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."workspace_id" = $1[0m  [["workspace_id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."workspace_id" = $1  [["workspace_id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."workspace_id" = $1[0m  [["workspace_id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."workspace_id" = $1  [["workspace_id", 16]]
+  Rendered workspaces/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 108ms (Views: 57.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/" for ::1 at 2015-08-14 09:09:55 -0400
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (3.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-08-14 09:11:17 -0400
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/workspaces.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-14 09:11:17 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-08-14 09:11:17 -0400
+
+
+Started GET "/assets/application.self-b90104e1903d443e91d81c30bc51b2b33b784055f189db664e56d67304f491c7.css?body=1" for ::1 at 2015-08-14 09:11:17 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-14 09:11:17 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-14 09:11:17 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-14 09:11:17 -0400
+
+
+Started GET "/assets/workspaces.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-14 09:11:17 -0400
+
+
+Started GET "/assets/application.self-0ac619e0a7432b8ae4632600c7faa5031c5842c7e1e249e0fdb5c7c87833afa3.js?body=1" for ::1 at 2015-08-14 09:11:17 -0400
+
+
+Started GET "/assets/bag_and_hands-03bf50309a93b0f39e6059423b3ec837cae3e97fcee69955eb1a60d0717c2836.jpg" for ::1 at 2015-08-14 09:11:17 -0400
+
+
+Started GET "/assets/signal-995bb08b11c6117b325c67375fbcf82b663e18299b615c346b930e4a091b0bea.png" for ::1 at 2015-08-14 09:11:17 -0400
+
+
+Started GET "/assets/wifinder_white-e24c869ed8f8ec4ef7ec23f5ce2567670d801275059c06ca6d6c0f06ff6d4de3.png" for ::1 at 2015-08-14 09:11:17 -0400

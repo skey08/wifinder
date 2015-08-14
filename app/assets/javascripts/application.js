@@ -16,3 +16,12 @@
 //= require_tree .
 
 // Add star rating to user_stars div
+
+
+$(document).ready(function(){
+
+  $("#signal").on("click", function (){
+    $(".meow").css("display", "block")
+  });
+
+})
