@@ -235,3 +235,31 @@ form input {
   padding: 5px;
   margin: 5px 0;
 }
+
+
+.meow {
+  content:url(cat.gif);
+  display: none;
+}
+
+#signal {
+  width: 12px;
+  margin-left: 50px;
+}
+
+.meow {
+  position: absolute;
+  animation-name: whiskers;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes whiskers {
+  0%{left:0%; bottom:0%}
+  20%{left:50%; bottom:50%;}
+  40%{left:10%; bottom:-80%;}
+  60%{left:80%; bottom:0%;}
+  80%{left:15%; bottom:40%; transform:rotate(360deg);}
+  100%0%{left:0%; bottom:0%}
+}
