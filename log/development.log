@@ -12014,3 +12014,17 @@ Started GET "/assets/signal-995bb08b11c6117b325c67375fbcf82b663e18299b615c346b93
 
 
 Started GET "/assets/wifinder_white-e24c869ed8f8ec4ef7ec23f5ce2567670d801275059c06ca6d6c0f06ff6d4de3.png" for ::1 at 2015-08-14 09:11:17 -0400
+
+
+Started GET "/" for ::1 at 2015-08-14 09:35:13 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#welcome as HTML
+  Rendered pages/welcome.html.erb within layouts/application (89.8ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+Completed 200 OK in 180ms (Views: 168.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/application.self-e687430a678113b0e07f227b0565c11221a0132ecc1054cb282f559b9803e43b.css?body=1" for ::1 at 2015-08-14 09:35:13 -0400
+
+
+Started GET "/assets/cat.gif" for ::1 at 2015-08-14 09:35:14 -0400
