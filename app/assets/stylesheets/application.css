@@ -261,5 +261,5 @@ form input {
   40%{left:10%; bottom:-80%;}
   60%{left:80%; bottom:0%;}
   80%{left:15%; bottom:40%; transform:rotate(360deg);}
-  100%0%{left:0%; bottom:0%}
+  100%{left:0%; bottom:0%}
 }
