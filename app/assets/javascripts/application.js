@@ -25,3 +25,7 @@ $(document).ready(function(){
   });
 
 })
+
+setTimeout(function() {
+    $('div.msg p.notice').fadeOut('fast');
+}, 3000);

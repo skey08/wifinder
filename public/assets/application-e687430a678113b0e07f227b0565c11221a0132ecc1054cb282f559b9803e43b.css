@@ -10,112 +10,108 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
 
-* {
+
+ * {
   margin: 0;
-}
+ }
 
-#bg {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
 
+ #bg {
+ position: fixed;
+ top: -50%;
+ left: -50%;
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+}
 #bg img {
-  background-size: cover;
+background-size: cover;
+background-size: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ margin: auto;
+ max-width: 200%;
+ /*max-height: 200%;
+ min-width: 50%;*/
+ min-height: 200%;
+ z-index: -1;
+filter: blur(6px);
+-webkit-filter: blur(6px);
+-moz-filter: blur(6px);
+-o-filter: blur(6px);
+-ms-filter: blur(6px);
+}
+
+
+
+
+/*.firstpage {
+  background-image: url("bag_and_hands.jpg");
+  background-position: center;
   background-size: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  max-width: 200%;
-  /*max-height: 200%;
-  min-width: 50%;*/
-  min-height: 200%;
-  z-index: -1;
-  filter: blur(6px);
-  -webkit-filter: blur(6px);
-  -moz-filter: blur(6px);
-  -o-filter: blur(6px);
-  -ms-filter: blur(6px);
-}
+  background-repeat: no-repeat;
+}*/
 
-.tagline {
-  color: white;
-  padding: 10px;
-  font-size:1.4em;
-  margin-bottom: 40px;
-}
+/*.firstpage {
+  padding-bottom: 100%;
+}*/
 
-p.starterlink a {
-  color: #ffffff;
-  border: 3px solid rgba(200, 200, 200, 0.4);
-  padding: 1em;
-  margin: .5em;
-  text-decoration: none;
-}
+ .page-wrap {
+   min-height: 100%;
 
-.starterlink a:hover {
-  background-color: rgba(200, 200, 200, 0.4);
-  color: black;
-  text-decoration: none;
-}
+   margin-bottom: -100px;
+ }
+ .page-wrap:after {
+   content: "";
+   display: block;
+ }
+ .site-footer, .page-wrap:after {
+   height: 100px;
+ }
 
-.page-wrap {
-  min-height: 100%;
-  margin-bottom: -100px;
-}
+ .row, .column {
+   box-sizing: border-box;
+ }
 
-.page-wrap:after {
-  content: "";
-  display: block;
-}
-
-.site-footer, .page-wrap:after {
-  height: 100px;
-}
-
-.row, .column {
-  box-sizing: border-box;
-}
-
-.row {
+ .row {
+  /*border: 2px*/
   border-bottom: 2px solid black;
   overflow: auto
 }
 
 .column {
+  /*border: 2px*/
   border-bottom: 2px solid black;
   float: left;
   border-radius: 20px;
+  /*text-align: center;*/
 }
 
-.column-1 { width: 8.333%; }
-.column-2 { width: 16.66%; }
-.column-3 { width: 25%; }
-.column-4 { width: 33.33%; }
-.column-5 { width: 41.66%; }
-.column-6 { width: 50%; }
-.column-7 { width: 58.33%; }
-.column-8 { width: 66.66%; }
-.column-9 { width: 75%; }
-.column-10 { width: 83.33%; }
-.column-11 { width: 91.66%; }
-.column-12 { width: 100%; }
+ .column-1 { width: 8.333%; }
+ .column-2 { width: 16.66%; }
+ .column-3 { width: 25%; }
+ .column-4 { width: 33.33%; }
+ .column-5 { width: 41.66%; }
+ .column-6 { width: 50%; }
+ .column-7 { width: 58.33%; }
+ .column-8 { width: 66.66%; }
+ .column-9 { width: 75%; }
+ .column-10 { width: 83.33%; }
+ .column-11 { width: 91.66%; }
+ .column-12 { width: 100%; }
 
-html, body {
+ html, body {
   height: 100%;
-}
+ }
 
-body {
+ body {
   font-family: 'Roboto', sans-serif;
   text-align: center;
  }
@@ -143,7 +139,7 @@ body {
 }
 
 .welcomelogo {
-  padding-top: 200px;
+    padding-top: 200px;
 }
 
 .navbar a:link {
@@ -159,34 +155,34 @@ body {
   text-decoration: underline;
 }
 
-a:link {
+ a:link {
   color: #58729E ;
   text-decoration: none;
-}
+ }
 
-a:visited {
+ a:visited {
   color: #58729E ;
   text-decoration: none;
-}
+ }
 
-a:hover {
+ a:hover {
   text-decoration: underline;
-}
+ }
 
-.footer {
+ .footer {
   color: #ffffff ;
   background: #8275A5;
   line-height: 50px;
-}
+ }
 
-.footer li {
+ .footer li {
   display: inline-block;
-}
+ }
 
-#workspace_index img {
+ #workspace_index img {
   width: 150px;
   padding-top: 20px;
-}
+ }
 
 .workspaceimg {
   float: left;
@@ -194,9 +190,9 @@ a:hover {
 }
 
 .workspaceinfo {
-  float: right;
-  padding: 10px 0;
-  margin: 10px;
+   float: right;
+   padding: 10px 0;
+   margin: 10px;
  }
 
 .workspaceinfo a {
@@ -208,16 +204,11 @@ a:hover {
 }
 
 .showtitle {
-  /*padding-left: 55px;*/
-  margin: 0 300px;
+  padding-left: 55px;
 }
 
 .showimg {
   max-width: 250px;
-}
-
-.ratings {
-  margin: 0 300px;
 }
 
 .review {
@@ -246,11 +237,7 @@ form input {
   margin: 5px 0;
 }
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> c4f20626d0e00e7ba3c424c3d18668d95c987ba6
 .meow {
   content:url(cat.gif);
   display: none;
@@ -268,6 +255,7 @@ form input {
   animation-iteration-count: infinite;
 }
 
+
 @keyframes whiskers {
   0%{left:0%; bottom:0%}
   20%{left:50%; bottom:50%;}
@@ -276,57 +264,3 @@ form input {
   80%{left:15%; bottom:40%; transform:rotate(360deg);}
   100%{left:0%; bottom:0%}
 }
-
-div.msg p.notice {
-  background-color: lemonchiffon;
-}
-
-
-@media (max-width: 40em){
-  .navbar{
-    float: none;
-    margin: 0;
-    overflow: auto;
-    width: auto;
-  }
-
-  #bg{
-    float: none;
-    margin: 0;
-    padding: 0 20px;
-    width: 88%;
-    position: fixed;
-    top: -26;
-    left: -46;
-  }
-
-.welcomelogo {
-  float: none;
-  margin: 0;
-  overflow: visible;
-  padding: 0 20px;
-  width: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-  }
-=======
-/*#map-container {
-  height: 400px;
-  border-radius: 16px 16px;
-  border-color: #fff;
-  border-style: solid;
-  box-shadow: 2px 2px 10px #B1B1B1;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  margin-left: 6em;
-  margin-right: 6em;
-  border-width: 7px;
- }*/
-
- #map-canvas {
-  height: 350px;
-  width: 50%;
-  margin-left: 26%;
- }
