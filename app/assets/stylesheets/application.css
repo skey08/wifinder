@@ -284,3 +284,8 @@ form input {
   80%{left:15%; bottom:40%; transform:rotate(360deg);}
   100%{left:0%; bottom:0%}
 }
+
+
+div.msg p.notice {
+  background-color: lemonchiffon;
+}
