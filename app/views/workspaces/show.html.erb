@@ -1,36 +1,61 @@
-<h1 class="showtitle"><%= @workspace.name %></h1>
+<div  data-no-turbolink>
+  <h1 class="showtitle"><%= @workspace.name %></h1>
 
-<% if !@reviews.blank? %>
-  <h2>Average Rating: </h2>
-  <p><span id="average_rating"></span> (<%= @reviews.count %> <%= @reviews.count != 1 ? "Reviews" : "Review" %>)</p>
-<% end %>
+<div class="ratings">
+  <% if !@reviews.blank? %>
+    <h2>Average Rating: </h2>
+    <p><span id="average_rating"></span> (<%= @reviews.count %> <%= @reviews.count != 1 ? "Reviews" : "Review" %>)</p>
+  <% end %>
+</div>
 
+  <ul>
+      <%= image_tag @workspace.image_url, class: "showimg" %>
+      <li><%= link_to @workspace.name, @workspace %></li>
+      <li><%= @workspace.address %></li>
+      <li><%= @workspace.category %></li>
+      <li><%= link_to "Workspace website", @workspace.company_url %></li>
+      <li><%= @workspace.hours %></li>
+  </ul>
 
-<ul>
-    <%= image_tag @workspace.image_url, class: "showimg" %>
-    <li><%= link_to @workspace.name, @workspace %></li>
-    <li><%= @workspace.address %></li>
-    <li><%= @workspace.category %></li>
-    <li><%= link_to "Workspace website", @workspace.company_url %></li>
-    <li><%= @workspace.hours %></li>
-</ul>
+    <div id="map-container" data-no-turbolink>
+      <div id="map-canvas"></div>
+    </div>
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script>
+    function initialize() {
+      var mapCanvas = document.getElementById('map-canvas');
+      var mapOptions = {
+        center: new google.maps.LatLng(38.904854, -77.03394000000003),
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+      var marker = new google.maps.Marker({
+      	position: new google.maps.LatLng(38.904854, -77.03394000000003),
+      	title: "Learning at GA!"
+      });
+      marker.setMap(map);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
 
-  <div class="reviews-header">
-    <h3>Reviews</h3>
-  </div>
-  <div class="reviews-list">
-    <%= render "reviews/index" %>
-  </div>
-  <div class="reviews-new">
-    <% if !@hasReview && current_user %>
-      <%= render "reviews/form" %>
-    <% elsif !current_user %>
-      <p>
-        Please log in to leave a review!
-      </p>
-    <% end %>
-  </div>
+    <div class="reviews-header">
+      <h3>Reviews</h3>
+    </div>
+    <div class="reviews-list">
+      <%= render "reviews/index" %>
+    </div>
+    <div class="reviews-new">
+      <% if !@hasReview && current_user %>
+        <%= render "reviews/form" %>
+      <% elsif !current_user %>
+        <p>
+          Please log in to leave a review!
+        </p>
+      <% end %>
+    </div>
 
+</div>
 
 <script>
   $('#average_rating').raty({
