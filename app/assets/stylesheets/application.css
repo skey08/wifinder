@@ -28,6 +28,8 @@
  z-index: -1;
 }
 #bg img {
+background-size: cover;
+background-size: 100%;
  position: absolute;
  top: 0;
  left: 0;
@@ -35,10 +37,15 @@
  bottom: 0;
  margin: auto;
  max-width: 200%;
- max-height: 200%;
- min-width: 50%;
- min-height: 50%;
+ /*max-height: 200%;
+ min-width: 50%;*/
+ min-height: 200%;
  z-index: -1;
+filter: blur(6px);
+-webkit-filter: blur(6px);
+-moz-filter: blur(6px);
+-o-filter: blur(6px);
+-ms-filter: blur(6px);
 }
 
 
@@ -46,13 +53,12 @@
 
 /*.firstpage {
   background-image: url("bag_and_hands.jpg");
-  background-size: cover;
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
-}
+}*/
 
-.firstpage {
+/*.firstpage {
   padding-bottom: 100%;
 }*/
 
@@ -202,4 +208,30 @@
 
 .showimg {
   max-width: 250px;
+}
+
+.review {
+  margin-left:3%;
+}
+
+.reviews-header h3 {
+  background-color: #58729E;
+  margin: 20px 300px;
+  color: white;
+}
+
+.reviews-list {
+  background-color: #CDCCD5;
+  margin: 20px 300px;
+}
+
+div.review-comment:nth-child(even),
+div.review-user:nth-child(even) {
+  background-color: white;
+}
+
+form input {
+  background-color: #FFF;
+  padding: 5px;
+  margin: 5px 0;
 }

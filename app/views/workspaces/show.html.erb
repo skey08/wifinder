@@ -14,12 +14,19 @@
     <li><%= link_to "Workspace website", @workspace.company_url %></li>
     <li><%= @workspace.hours %></li>
 </ul>
+<<<<<<< HEAD
   <br>
   <div class="reviews-list">
+=======
+
+<div class="review">
+  <div class="reviews-header">
+>>>>>>> 191fcccd3159ce7607dd74067f1debaae4e474cc
     <h3>Reviews</h3>
+  </div>
+  <div class="reviews-list">
     <%= render "reviews/index" %>
   </div>
-
   <div class="reviews-new">
     <% if !@hasReview && current_user %>
       <%= render "reviews/form" %>
@@ -31,6 +38,7 @@
   </div>
 
 
+<<<<<<< HEAD
   <div id="map-container">
     <div id="map-canvas"></div>
   </div>
@@ -74,6 +82,8 @@
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 
+=======
+>>>>>>> 191fcccd3159ce7607dd74067f1debaae4e474cc
 <script>
   $('#average_rating').raty({
     path: '/assets',
@@ -81,3 +91,5 @@
     score: <%= @workspace.average_rating %>
   })
 </script>
+
+</div>

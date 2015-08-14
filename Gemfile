@@ -45,3 +45,4 @@ end
 
 gem "pry"
 gem "devise"
+gem 'rails_12factor', group: :production
