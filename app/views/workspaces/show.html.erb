@@ -1,40 +1,41 @@
-<h1 class="showtitle"><%= @workspace.name %></h1>
+<div  data-no-turbolink>
+  <h1 class="showtitle"><%= @workspace.name %></h1>
 
-<% if !@reviews.blank? %>
-  <h2>Average Rating: </h2>
-  <p><span id="average_rating"></span> (<%= @reviews.count %> <%= @reviews.count != 1 ? "Reviews" : "Review" %>)</p>
-<% end %>
+  <% if !@reviews.blank? %>
+    <h2>Average Rating: </h2>
+    <p><span id="average_rating"></span> (<%= @reviews.count %> <%= @reviews.count != 1 ? "Reviews" : "Review" %>)</p>
+  <% end %>
 
 
-<ul>
-    <%= image_tag @workspace.image_url, class: "showimg" %>
-    <li><%= link_to @workspace.name, @workspace %></li>
-    <li><%= @workspace.address %></li>
-    <li><%= @workspace.category %></li>
-    <li><%= link_to "Workspace website", @workspace.company_url %></li>
-    <li><%= @workspace.hours %></li>
-</ul>
+  <ul>
+      <%= image_tag @workspace.image_url, class: "showimg" %>
+      <li><%= link_to @workspace.name, @workspace %></li>
+      <li><%= @workspace.address %></li>
+      <li><%= @workspace.category %></li>
+      <li><%= link_to "Workspace website", @workspace.company_url %></li>
+      <li><%= @workspace.hours %></li>
+  </ul>
 
-  <div class="reviews-header">
-    <h3>Reviews</h3>
-  </div>
-  <div class="reviews-list">
-    <%= render "reviews/index" %>
-  </div>
-  <div class="reviews-new">
-    <% if !@hasReview && current_user %>
-      <%= render "reviews/form" %>
-    <% elsif !current_user %>
-      <p>
-        Please log in to leave a review!
-      </p>
-    <% end %>
-  </div>
+    <div class="reviews-header">
+      <h3>Reviews</h3>
+    </div>
+    <div class="reviews-list">
+      <%= render "reviews/index" %>
+    </div>
+    <div class="reviews-new">
+      <% if !@hasReview && current_user %>
+        <%= render "reviews/form" %>
+      <% elsif !current_user %>
+        <p>
+          Please log in to leave a review!
+        </p>
+      <% end %>
+    </div>
 
-  <div id="map-container">
-    <div id="map-canvas"></div>
-  </div>
-
+    <div id="map-container" data-no-turbolink>
+      <div id="map-canvas"></div>
+    </div>
+</div>
   <style>
     #map-container {
        height: 400px;
